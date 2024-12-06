@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Sidebar</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div class="admin-container">
+    <div id="sidebar">
+      <section class="sidebar">
+        <a href="#" class="brand">
+          <i class="bi bi-amd icon text-primary"></i>
+          HRM
+        </a>
+
+        <ul class="side-menu">
+          <li class="mb-3">
+            <a href="dashboard.html" class="active">
+              <i class="bi bi-columns-gap icon"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="employee.html">
+              <i class="bi bi-people-fill icon"></i>
+              Employee Table
+            </a>
+          </li>
+          <li>
+            <a href="Attendance.html">
+              <i class="bi bi-book-fill icon"></i>
+              Attendance
+            </a>
+          </li>
+          <li>
+            <a href="leave.html">
+              <i class="bi bi-clipboard-fill icon"></i>
+              Leave Management
+              <i class="bi bi-chevron-compact-right icon-right"></i>
+            </a>
+            <ul class="side-dropdown">
+              <li><a href="leave.html">All Leave Request</a></li>
+              <li><a href="addleave.html">Leave Request</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Employee salary.html">
+              <i class="bi bi-currency-dollar icon"></i>
+              Employee salary
+            </a>
+          </li>
+          <li>
+            <a href="map.html">
+              <i class="bi bi-geo-alt-fill icon"></i>
+              Map
+            </a>
+          </li>
+          <li>
+            <a href="client.html">
+              <i class="bi bi-person-fill icon"></i>
+              Clients
+              <i class="bi bi-chevron-compact-right icon-right"></i>
+            </a>
+            <ul class="side-dropdown">
+              <li><a href="client.html">All Clients</a></li>
+              <li><a href="addclient.html">Add Clients</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="form">
+              <i class="bi bi-person-check-fill icon"></i>
+              Form
+              <i class="bi bi-chevron-compact-right icon-right"></i>
+            </a>
+            <ul class="side-dropdown">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="registration.html">Registration</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div id="main" class="main">
+      <nav>
+        <span class="toggle-sidebar">☰</span>
+        <!-- Other nav elements -->
+      </nav>
+      <div class="main-wrapper">
+        <!-- Main content -->
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

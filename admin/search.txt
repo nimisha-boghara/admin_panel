@@ -1,0 +1,72 @@
+<!-- header area -->
+  <div class="topbar">
+   
+    <div class="logo">
+      <h2>Brand.</h2>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="search here">
+      <label for="search"><i class="bi bi-search"></i></label>
+    </div>
+    <i class="bi bi-bell" style="font-size: 20px;"></i>
+    <div class="user">
+      <img src="./i/profile.jpg" alt="">
+    </div>
+  </div>
+<!-- header area end -->
+
+-------------------------------------------------------------------------------------------------
+
+/* topbar area */
+.topbar{
+    position: fixed;
+    background:#fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr 1fr;
+    align-items: center;
+    z-index: 1;
+}
+.logo h2{
+color: #299B63;
+}
+.search-box{
+   position: relative;
+   width: 60%;
+   justify-self: center;
+}
+.search-box input{
+   width: 100%;
+   height: 40px;
+   padding: 0 40px;
+   font-size: 16px;
+   outline: none;
+   border: none;  
+   border-radius: 10px;
+   background: linear-gradient(to right, #33ccff 1%, #99ff66 100%);
+   margin-top: 10px;
+}
+.search-box i{
+   position:absolute;
+   right: 15px;
+   top: 15px;
+   cursor: pointer;
+}
+.user{
+   position: relative;
+   height: 50px;
+   width: 50px;
+}
+.user img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+

@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="employee.css">
+    <link rel="stylesheet" href="attendance.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- sidebar -->
+        <div id="sidebar">
+            <section class="sidebar">
+                <a href="#" class="brand">
+                    <i class="bi bi-amd icon text-primary"></i>
+                   <span> HRM</span>
+                </a>
+
+                <ul class="side-menu">
+                    <li class="mb-3">
+                        <a href="dashboard.html" class="active">
+                            <i class="bi bi-columns-gap icon"></i>
+                           <span>Dashboard</span> 
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="employee.html">
+                            <i class="bi bi-people-fill icon"></i>
+                           <span>Employee Table</span>
+                        </a>
+
+                      
+                    </li>
+
+                    <li>
+                        <a href="Attendance.html">
+                            <i class="bi bi-book-fill icon"></i>
+                            <span>Attendance</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="leave.html">
+                            <i class="bi bi-clipboard-fill icon"></i>
+                            <span>Leave Management</span>
+                            <i class="bi bi-chevron-compact-right icon-right"></i>
+                        </a>
+
+                        <ul class="side-dropdown">
+                            <li><a href="leave.html">All Leave Request</a></li>
+                            <li><a href="addleave.html">Leave Request</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="Employee salary.html">
+                            <i class="bi bi-currency-dollar icon"></i>
+                            <span>Employee salary</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="map.html">
+                            <i class="bi bi-geo-alt-fill icon"></i>
+                           <span>Map</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="client.html">
+                            <i class="bi bi-person-fill icon"></i>
+                           <span> Clients</span>
+                            <i class="bi bi-chevron-compact-right icon-right"></i>
+                        </a>
+
+                        <ul class="side-dropdown">
+                            <li><a href="client.html">All Clients</a></li>
+                            <li><a href="addclient.html">Add Clients</a></li>
+                        </ul>
+                    </li>
+
+                
+
+                    <li>
+                        <a href="form">
+                            <i class="bi bi-person-check-fill icon"></i>
+                           <span> Form</span>
+                            <i class="bi bi-chevron-compact-right icon-right"></i>
+                        </a>
+
+                        <ul class="side-dropdown">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+        <!-- sidebar -->
+
+        <section id="main" class="main-wrapper">
+            <!-- Navbar -->
+            <section id="content">
+                <nav>
+                    <i class="bi bi-list toggle-sidebar"></i>
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search...">
+                            <i class="bi bi-search icon"></i>
+                        </div>
+                    </form>
+
+                    <!-- Notification start -->
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-bell icon"></i>
+                                <span class="badge">5</span>
+                            </a>
+                        </button>
+                        <ul class="dropdown-menu" style="min-width: 16rem;">
+                            <li class="header">NOTIFICATION</li>
+
+                            <li class="body">
+                                <div class="scrolldiv">
+                                    <ul class="menu">
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-1.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">Sarah Smith</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        14 mins ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-2.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">Airi Satou</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        10 mins ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-3.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">John Doe</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        3 hours ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-4.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">Ashton Cox</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        2 hours ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-5.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">Sarah Smith</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        30 mins ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-1.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">Sarah Smith</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        14 mins ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-2.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">Airi Satou</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        10 mins ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-3.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">John Doe</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        3 hours ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="border">
+
+                                            <a href="#" onclick="return false;">
+                                                <span class="table-img msg-user">
+                                                    <img src="user-4.jpg">
+                                                </span>
+                                                <span class="menu-info">
+                                                    <span class="menu-title">Ashton Cox</span>
+                                                    <span class="menu-desc">
+                                                        <i class="bi bi-clock"></i>
+                                                        2 hours ago
+                                                    </span>
+
+                                                    <span class="menu-desc">
+                                                        Please check your email
+                                                    </span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="footer py-6 px-7">
+
+                                <button class="btn btn-primary w-100">
+                                    View All Notifications
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Notification end -->
+
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-chat-left-dots"></i>
+                        <span class="badge">8</span>
+                    </a>
+
+                    <!-- Profile start -->
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="user.png" class="avatar">
+                        </button>
+
+
+                        <div class="dropdown-menu profile-dropdown dropdown-menu-end dropdown-menu-animat-up mt-1"
+                            aria-labelledby="drop1">
+                            <div class="position-relative">
+
+                                <div class="d-flex align-items-center pb-3 border-bottom gap-2 px-1">
+                                    <img src="user.png" class="rounded-circle" id="user">
+                                    <div>
+                                        <h5 class="mb-0">David McMichael</h5>
+                                        <p class="mb-0 text-dark">david@wrappixel.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="message-body">
+                                    <a href="profile.html" class="dropdown-item  rounded-1">My Profile</a>
+                                    <a href="#" class="dropdown-item  rounded-1">My Subscription</a>
+                                    <a href="admin login.html" class="dropdown-item  rounded-1">Login</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Profile end -->
+
+                </nav>
+            </section>
+            <!-- Navbar -->
+
+            <!-- main -->
+            <main>
+                <div class="container-fluid">
+
+                    <div class="block-header">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 breadcrumb-1">
+
+
+                                <div style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                                    aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <h4>Employee Attendance |</h4>
+                                        <li class="breadcrumb-item"><a href="dashboard.html"><i
+                                                    class="bi bi-house-door-fill"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                                        <li class="breadcrumb-item " aria-current="page">Attendance</li>
+                                        <li class="breadcrumb-item " aria-current="page">Employee Attendance</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="d-flex mb-4 align-items-center">
+
+                                        <div>
+                                            <h4 class="card-title mb-0">Employee Table</h4>
+                                        </div>
+
+                                        <div class="ms-auto flex-shrink-0">
+
+                                            <!-- Edit Modal Start -->
+                                            <div class="modal fade" id="editEmployeeModal" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                                                                Edit Employee</h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+
+                                                        <div class="modal-body">
+
+                                                            <div class="form-group">
+                                                                <label>Name</label>
+                                                                <input type="text" class="form-control" required>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Designation</label>
+                                                                <input type="text" class="form-control" required>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Phone</label>
+                                                                <input type="number" class="form-control" required>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Email</label>
+                                                                <input type="text" class="form-control" required>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Address</label>
+                                                                <textarea class="form-control" required></textarea>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label>Joining Date</label>
+                                                                <input type="date" class="form-control" required>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-success">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Edit Modal end -->
+
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive">
+
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Id</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Department</th>
+                                                    <th scope="col">Check In</th>
+                                                    <th scope="col">Shift</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+
+                                                <tr>
+                                                    <td scope="col">1001</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-success">10:28</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1002</td>
+                                                    <td scope="col">Pooja Patel</td>
+                                                    <td scope="col">Finance</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1003</td>
+                                                    <td scope="col">Sarah Smith</td>
+                                                    <td scope="col">Transport</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1004</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1005</td>
+                                                    <td scope="col">John Deo</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-2</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1006</td>
+                                                    <td scope="col">Jay Soni</td>
+                                                    <td scope="col">Account</td>
+                                                    <td scope="col" class="text-success">10:25</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td scope="col">1007</td>
+                                                    <td scope="col">Megha Trivedi</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-primary">10:40</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1008</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Devloper</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1009</td>
+                                                    <td scope="col">Pooja Patel</td>
+                                                    <td scope="col">Finance</td>
+                                                    <td scope="col" class="text-success">10:20</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1010</td>
+                                                    <td scope="col">John Deo</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1011</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-success">10:28</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1012</td>
+                                                    <td scope="col">Pooja Patel</td>
+                                                    <td scope="col">Finance</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1013</td>
+                                                    <td scope="col">Sarah Smith</td>
+                                                    <td scope="col">Transport</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1014</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1015</td>
+                                                    <td scope="col">John Deo</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-2</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1016</td>
+                                                    <td scope="col">Jay Soni</td>
+                                                    <td scope="col">Account</td>
+                                                    <td scope="col" class="text-success">10:25</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td scope="col">1017</td>
+                                                    <td scope="col">Megha Trivedi</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-primary">10:40</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1018</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Devloper</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1019</td>
+                                                    <td scope="col">Pooja Patel</td>
+                                                    <td scope="col">Finance</td>
+                                                    <td scope="col" class="text-success">10:20</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1020</td>
+                                                    <td scope="col">John Deo</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1021</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-success">10:28</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1022</td>
+                                                    <td scope="col">Pooja Patel</td>
+                                                    <td scope="col">Finance</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1023</td>
+                                                    <td scope="col">Sarah Smith</td>
+                                                    <td scope="col">Transport</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1024</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1025</td>
+                                                    <td scope="col">John Deo</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-2</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1026</td>
+                                                    <td scope="col">Jay Soni</td>
+                                                    <td scope="col">Account</td>
+                                                    <td scope="col" class="text-success">10:25</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td scope="col">1027</td>
+                                                    <td scope="col">Megha Trivedi</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-primary">10:40</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1028</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Devloper</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1029</td>
+                                                    <td scope="col">Pooja Patel</td>
+                                                    <td scope="col">Finance</td>
+                                                    <td scope="col" class="text-success">10:20</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1030</td>
+                                                    <td scope="col">John Deo</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1031</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-success">10:28</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1032</td>
+                                                    <td scope="col">Pooja Patel</td>
+                                                    <td scope="col">Finance</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                     <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                        </td>
+                                                        <td scope="col" id="btn-edit">
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#editEmployeeModal"> <i
+                                                                    class="bi bi-pencil-square"></i>
+                                                            </a>
+
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#deleteEmployeeModal"> <i
+                                                                    class="bi bi-trash"></i>
+                                                            </a>
+                                                        </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1033</td>
+                                                    <td scope="col">Sarah Smith</td>
+                                                    <td scope="col">Transport</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1034</td>
+                                                    <td scope="col">Rajesh</td>
+                                                    <td scope="col">Development</td>
+                                                    <td scope="col" class="text-primary">10:30</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1035</td>
+                                                    <td scope="col">John Deo</td>
+                                                    <td scope="col">Testing</td>
+                                                    <td scope="col" class="text-danger">-</td>
+                                                    <td scope="col">Shift-2</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-danger-subtle text-danger rounded-pill d-inline">
+                                                            Leave
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td scope="col">1036</td>
+                                                    <td scope="col">Jay Soni</td>
+                                                    <td scope="col">Account</td>
+                                                    <td scope="col" class="text-success">10:25</td>
+                                                    <td scope="col">Shift-1</td>
+                                                    <td scope="col">
+                                                        <span
+                                                            class="badge fw-semibold py-1 w-85 bg-success-subtle text-success rounded-pill d-inline">
+                                                            Present
+                                                        </span>
+                                                    </td>
+                                                    <td scope="col" id="btn-edit">
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#editEmployeeModal"> <i
+                                                                class="bi bi-pencil-square"></i>
+                                                        </a>
+
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteEmployeeModal"> <i
+                                                                class="bi bi-trash"></i>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                   
+                                </div>
+                            </div>
+
+                            <div class="wrapper">
+                                <div class="hint-text">showing <b>5</b> Out Of <b>20</b></div>
+                                <nav aria-label="Page navigation example" id="pagination">
+
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            <!-- main -->
+
+            <!-- Footer start -->
+            <footer class="footer">
+                <div class="footer-in">
+                    <p class="mb-0"><i class="bi bi-c-circle"></i> 2024 HRM Design. All Rights Reserved.</p>
+                </div>
+            </footer>
+            <!-- Footer End -->
+
+        </section>
+    </div>
+
+
+    <!-- Edit Modal Start -->
+    <div class="modal fade" id="editEmployeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                        Edit Attendance</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label>Id</label>
+                        <input type="number" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Department</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>check In</label>
+                        <input type="time" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Shift</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Modal end -->
+
+    <!-- Delete Modal Start -->
+
+
+    <div class="modal fade" id="deleteEmployeeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                        Employee Attendance</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <p> Are you sure you want to delete this Records</p>
+                    <p class="text-warning"><small>this action cannot be
+                            Undone</small></p>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal end -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
